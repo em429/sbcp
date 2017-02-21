@@ -19,6 +19,7 @@ target_folder = sys.argv[3]
 
 if not re.search('\/$', target_folder):
     print('Target folder name must end with a forward slash.')
+    sys.exit()
 
 for foldername, subfolders, filenames in os.walk(scan_folder):
     for filename in filenames:
